@@ -1,7 +1,3 @@
-/*
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
-*/
-
 class Solution {
     func maxProfit(_ prices: [Int]) -> Int {
         guard prices.count > 0 else { return 0 }
