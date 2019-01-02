@@ -1,31 +1,33 @@
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
+ * public class TreeNode {
+ *     public var val: Int
+ *     public var left: TreeNode?
+ *     public var right: TreeNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.left = nil
+ *         self.right = nil
+ *     }
  * }
  */
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
-var postorderTraversal = function(root) {
-    var array = [];
-    var n = root; 
-    var answer = [];
-    
-    while (n != null || array.length > 0) {
-        if (n != null) {
-            array.push(n);
-            answer.unshift(n.val);
-            n = n.right; 
-            
-        } else {
-            const last = array.pop();
-            n = last.left 
+class Solution {
+    func preorderTraversal(_ root: TreeNode?) -> [Int] {
+        var n = root 
+        var nodes = [TreeNode]()
+        var a = [Int]()
+        
+        while n != nil || nodes.isEmpty == false {
+            if let node = n {
+                nodes.append(node)
+                a.append(node.val)
+                n = node.left 
+                
+            } else {
+                n = nodes.removeLast().right 
+            }
         }
         
+        return a
     }
-    
-    return answer;
-};
+}
