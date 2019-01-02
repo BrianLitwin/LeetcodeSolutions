@@ -51,16 +51,10 @@ var fourSum = function(nums, target) {
         return retAnswer 
     }
     
-    var stringify = function(arr) {
-        return arr.reduce(function(string, e){
-            return string + e.toString(); 
-        })
-    }
-    
     for (var n1 = 0; n1 < nums.length - 3; n1++) {
         var retAnswers = threeSum(n1, target)
         for (answer of retAnswers) {
-            const key = stringify(answer);
+            const key = answer.toString(); 
             if (!keys.has(key)) {
                 keys.add(key); 
                 answers.push(answer); 
