@@ -3,9 +3,6 @@
  * @param {number[][]} prerequisites
  * @return {number[]}
  */
-
-// could use an array too 
-
 var findOrder = function(numCourses, prerequisites) {
     var workingGraph = []
     
