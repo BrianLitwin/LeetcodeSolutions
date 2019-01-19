@@ -17,12 +17,11 @@ var generatePermute = function(nums, currentResult, finalResult) {
         return;
     }
     
-    for(var i = 0; i < nums.length; i++) {
-        var num = nums[i];
+    nums.forEach((num, i) => {
         var newNums = nums.slice()
         newNums.splice(i, 1)
         var newCurrentResult = currentResult.slice()
         newCurrentResult.push(num)
         generatePermute(newNums, newCurrentResult, finalResult)
-    }
+    })
 }
