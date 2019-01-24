@@ -3,6 +3,9 @@
 draft - this doesn't work yet 
 idea is to create a 2d array
 
+looking at all the possible lengths, and seeing whether the first and last character 
+in a given substring match, and asking the cache about the whether the charcters 
+between them are also a palindrome. 
 
 */
 
