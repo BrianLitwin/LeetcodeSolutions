@@ -7,6 +7,9 @@ looking at all the possible lengths, and seeing whether the first and last chara
 in a given substring match, and asking the cache about the whether the charcters 
 between them are also a palindrome. 
 
+if you find that the endletters in aabcddcbaa, eg a and a are equal, you don't have to check the rest of the 
+letters between them, you should have that cached 
+
 */
 
 
