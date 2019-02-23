@@ -4,12 +4,12 @@
  */
 var subsets = function(nums) {
 
-var answer = []; 
+  var answer = []; 
   answer.push([])
   for (var i = 0; i < nums.length; i++) {
     getPowerSet(nums, answer, i)
   }
- return answer
+  return answer
 };
 
 function getPowerSet(nums, arr, index) {
