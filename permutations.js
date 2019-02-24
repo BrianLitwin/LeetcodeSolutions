@@ -5,24 +5,20 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-var permute = function(nums) {
-    var result = [];
-    generatePermute(nums, [], result);
-    
-    return result;
-};
+const getPerms = (nums, cur, ans) => {
+    if (nums.length === 0) {
+        ans.push(cur)
+    }    
 
-var generatePermute = function(nums, currentResult, finalResult) {
-    if(nums.length === 0) {
-        finalResult.push(currentResult.slice());
-        return;
-    }
-    
-    nums.forEach((num, i) => {
-        var newNums = nums.slice()
-        newNums.splice(i, 1)
-        var newCurrentResult = currentResult.slice()
-        newCurrentResult.push(num)
-        generatePermute(newNums, newCurrentResult, finalResult)
-    })
+   nums.forEach((num, i) => {
+        const newArr = nums.slice()
+        newArr.splice(i, 1)
+        getPerms(newArr, cur.concat(num), ans)
+   }) 
 }
+
+var permute = function(nums) {
+    var ans = []
+    getPerms(nums, [], ans)
+    return ans 
+};
