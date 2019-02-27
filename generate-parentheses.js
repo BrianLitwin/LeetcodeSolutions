@@ -4,7 +4,11 @@
 
 /**
  * @param {number} n
- * @return {string[]}
+ * @return {string[]
+ 
+ The idea is that there are two options at every step: at a L or R paren. 
+ You can only add an R if the number of L's is greater than the number of R's. 
+ 
  */
 
 var generateParenthesis = function(n) {
