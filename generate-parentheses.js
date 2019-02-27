@@ -9,7 +9,6 @@
 
 var generateParenthesis = function(n) {
     var answer = [];
-    var cur = ""
     getParens(n, 0, 0, [], answer)
     return answer 
 };
