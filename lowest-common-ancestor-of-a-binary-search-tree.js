@@ -26,8 +26,6 @@ function isEqual(n1, n2) {
         return false 
     }
     
-    
-  
     return n1.val == n2.valu && 
       isEqual(n1.left, n2.left) && 
       isEqual(n1.right, n2.right)
