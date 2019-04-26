@@ -1,3 +1,3 @@
 # Leetcode Solutions
 
-As of now in Swift, C, JavaScript, and Python. 
+As of now in Swift, C, JavaScript, Clojure, and Python. 
